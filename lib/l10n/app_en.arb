@@ -1,0 +1,178 @@
+
+{
+    "language": "Language",
+    "@language":{
+      "description": "the current language"
+    },
+    "welcome": "Welcome",
+    "@welcome": {
+        "description": "welcome new user message"
+    },
+    "balance": "Balance",
+    "@balance": {
+        "description": "user total balance"
+    },
+    "youCanSPend" :" You can Spend ",
+    "@youCanSPend": {
+        "description": "you can spend text"
+    },
+    "everyDay": " Every day until next month. ",
+    "@everyDay": {
+        "description": "user monthely spend in total"
+    },
+    "addBalance": "Add Balance",
+    "@addBalance": {
+      "description": "Add balance to your account"
+    },
+    "addExpense": "Add Expense",
+    "@addExpense":{
+      "description": "Add expense to your account"
+    },
+     "expense":" Expense",
+    "icome": "Income",
+    "save": "save",
+    "@save":{
+        "description": "save "
+    },
+    "saveAndExite": "Save and exite",
+    "@saveAndExite": {
+       "description": "save and close the tap"
+    },
+    "dailyReminderTitle": "Daily reminder",
+    "@dailyReminderTitle":{
+      "description" : "daily notification reminder"
+    },
+    "notificationBody": "Did you remember to add your daily expenses?.",
+    "@notificationBody":{
+        "description": "daily notification body"
+    },
+    "settings": "Settings",
+    "nameText": "Name :    {userName}",
+    "@nameText": {
+        "description": "hello user",
+        "placeholders":{
+            "userName":{
+                "type":"String"
+            }
+        }
+    },
+    "changeName": "Change your user name",
+    "salaryText": "Salary : {salary}",
+    "@salaryText": {
+        "description": "change salary text",
+        "placeholders":{
+            "salary":{
+                "type":"String"
+            }
+        }
+    },
+    "salaryChange": "change you salary",
+    "currency": "Currency ",
+    "overviewFilter": "Spending Filter",
+    "ok": "Ok",
+    "nullNumber": "please enter a number here to procces",
+    "falseNumber": "please enter valid number !",
+    "negativeNumber": "please enter a positive number only ",
+    "nullName": "name can't be empty!",
+    "shortName": "name should have at least 3 letters",
+    "longName": "user name can't be longer than 25 chars ",
+    "changeSaved": "new changes have been saved successfuly",
+    "cancel": "Cancel",
+    "error": "Error",
+    "total": "Total {amount}",
+    "@total":{
+        "placeholders":{
+            "amount":{
+                "type":"String"
+            }
+        }
+    },
+    "january": "January", 
+    "february": "February",
+    "march": "March",
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December",
+    "monthExpense": " {monthName} expenses",
+    "@monthExpense": {
+        "placeholders": {
+            "monthName": {
+                "type": "String"
+            }
+        }
+    },
+    "searchText": "Enter title or category",
+    "all": "All",
+    "thisMonth": "This month ",
+    "thisYear": "This year ",
+    "monthIncome": " {monthName} income",
+    "@monthIncome": {
+        "placeholders": {
+            "monthName": {
+                "type": "String"
+            }
+        }
+    },
+    "title": "Title",
+    "amount": "Amount",
+    "details": "Details",
+    "optional": "[Optional]",
+    "dateSelect": "Select the date ",
+     "chooseCategory": "Choose Category",
+    "car": "car",
+    "electronics" : "electronics",
+    "entertainments" : "entertainments",
+    "family" : "family",
+    "food" : "food",
+    "friends" : "friends",
+    "home" : "home",
+    "sports" : "sports",
+    "transportation" : "transportation",
+    "vacation" : "vacation",
+    "work" : "work",
+    "other" : "other",
+    "newUser": "New User",
+    "rigeonCurrency": " Select your rigeon currency ",
+    "start": "Start",
+    "enterName": "Enter your name here",
+    "monthSalary": "Enter your monthly salary",
+    "nullSalary": "please enter your monthly salay here",
+    "currencyAlert": "please select your cuurency",
+    "showNumberOnly": "Show numbers only in numer format",
+    "firstSalaryTip": "you can press on this button to see where have you spent all your money so far ",
+    "secondSalaryTip": "you can press on this button to check where have you gain all your money",
+    "expensesTip": "three rules here : \n\n\n1_Press on expense item to view the details you provided\n\n2_Jold on expense item to edite it\n\n3_Swipe left to delete stuff",
+    "balanceTip": "three rules here \n\n\n1_Press on bonuse item to view the details you provided\n\n2_Jold on bonuse item to edite it\n\n3_Swipe left to delete an stuff",
+    "continueButton": "Continue",
+    "next": "Next",
+    "noDetails": "no details to show..",
+    "areYouSure": "are you sure ?",
+    "deleteItemText": "You are about to remove ' {itemTitle} '",
+    "@deleteItemText":{
+        "placeholders":{
+            "itemTitle":{
+                "type": "String"
+            }
+        }
+    },
+    "yes": "Yes",
+    "no": "No"
+    
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 
 import '../models/bounsePay.dart';
 
-import '../helper/db_helper.dart';
+import '../helper/db.dart';
 import '../providers/user_data.dart';
 
 class BonusePayProvider with ChangeNotifier {
@@ -54,7 +54,7 @@ class BonusePayProvider with ChangeNotifier {
   //read all database from device based on filtered search
   Future<List<BonusePay>> _readBalanceTable(UserTimeFilter filter) async {
     List<BonusePay> tempList = [];
-    List<Map<String, dynamic>> db = await DataBaseHelper.readFromBalance();
+    List<Map<String, dynamic>> db = await DataBase.readFromBalance();
     db.forEach((balancePay) {
       final tempBonuse = BonusePay(
         amount: balancePay['amount'],
@@ -87,7 +87,7 @@ class BonusePayProvider with ChangeNotifier {
 
   Future addMonthBounse(
       double amount, String title, String decription, DateTime date) async {
-    await DataBaseHelper.insertInBalance({
+    await DataBase.insertInBalance({
       'id': date.toIso8601String(),
       'title': title,
       'amount': amount,
@@ -115,7 +115,7 @@ class BonusePayProvider with ChangeNotifier {
     int i = _bonusePays.indexWhere((bonuse) => bonuse.id == id);
     if (i >= 0) _bonusePays.remove(_bonusePays[i]);
     _checkFilterAndUpdateOverView(bonuse, true);
-    DataBaseHelper.updateBonuse(id, {
+    DataBase.updateBonuse(id, {
       'id': id,
       'title': title,
       'amount': amount,
@@ -130,7 +130,7 @@ class BonusePayProvider with ChangeNotifier {
       _bonusePays.remove(_bonusePays[i]);
       notifyListeners();
     }
-    DataBaseHelper.deleteFromTable(DataBaseHelper.balanceTable, id);
+    DataBase.deleteFromTable(DataBase.balanceTable, id);
   }
 
   List<BonusePay> filterSearch(String searchFilter) {

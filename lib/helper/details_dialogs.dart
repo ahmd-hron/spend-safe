@@ -1,6 +1,6 @@
 import 'package:flutter/Material.dart';
 
-class DialogHelper {
+class DetailsDialog {
   static Future<dynamic> test(
       BuildContext context, String title, String desciption) async {
     return showDialog(

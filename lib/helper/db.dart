@@ -1,7 +1,7 @@
 import 'package:sqflite/sqflite.dart' as sql;
 import 'package:path/path.dart' as path;
 
-class DataBaseHelper {
+class DataBase {
   static const String expenseTable = 'user_expense';
   static const String balanceTable = 'user_balance';
   static Future<sql.Database> getDataBase() async {

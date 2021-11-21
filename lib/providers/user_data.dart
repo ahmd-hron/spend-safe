@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import '../helper/utilities.dart';
-import '../helper/db_helper.dart';
+import '../helper/db.dart';
 import '../helper/date.dart';
 
 enum UserTimeFilter { month, year, all }
@@ -69,7 +69,7 @@ class UserDataProvider with ChangeNotifier {
 
   void addNewUserSalary(double salary) {
     if (isNewUser == true) {
-      DataBaseHelper.insertInBalance({
+      DataBase.insertInBalance({
         'id': DateTime.now().toIso8601String(),
         'title': '${Date.getMonthName(DateTime.now().month)} Salary',
         'amount': salary,
@@ -123,7 +123,7 @@ class UserDataProvider with ChangeNotifier {
   }
 
   Future _addThisMonthSalary(UserData user, DateTime currentDate) async {
-    DataBaseHelper.insertInBalance({
+    DataBase.insertInBalance({
       'id': DateTime.now().toIso8601String(),
       'title': '${Date.getMonthName(DateTime.now().month)} Salary',
       'amount': user.salary,

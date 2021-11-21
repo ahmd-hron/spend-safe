@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 
 import '../models/expense.dart';
-import '../helper/db_helper.dart';
+import '../helper/db.dart';
 import '../providers/user_data.dart';
 
 import '../helper/utilities.dart';
@@ -66,7 +66,7 @@ class ExpenseProvider with ChangeNotifier {
 
   Future addExpence(double amount, String title, String decription,
       DateTime date, ExpenseCategory expenseCategory) async {
-    await DataBaseHelper.insertExpense({
+    await DataBase.insertExpense({
       'id': date.toIso8601String(),
       'title': title,
       'amount': amount,
@@ -91,7 +91,7 @@ class ExpenseProvider with ChangeNotifier {
       _expenses.remove(_expenses[i]);
       notifyListeners();
     }
-    DataBaseHelper.deleteFromTable(DataBaseHelper.expenseTable, id);
+    DataBase.deleteFromTable(DataBase.expenseTable, id);
   }
 
   Future updateExpenses(String id, String title, double amount, DateTime date,
@@ -115,7 +115,7 @@ class ExpenseProvider with ChangeNotifier {
     if (i >= 0) _expenses.remove(_expenses[i]);
     _checkFilterAndUpdateOverView(expense, true);
     notifyListeners();
-    DataBaseHelper.updateExpense(id, values);
+    DataBase.updateExpense(id, values);
   }
 
   Expense findById(String id) {
@@ -124,7 +124,7 @@ class ExpenseProvider with ChangeNotifier {
   }
 
   Future<List<Expense>> _readAllExpense(UserTimeFilter filter) async {
-    final values = await DataBaseHelper.readExpenseTable();
+    final values = await DataBase.readExpenseTable();
     List<Expense> tempList = [];
     values.forEach((value) {
       Expense temp = (Expense(

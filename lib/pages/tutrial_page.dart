@@ -120,7 +120,7 @@ class _TutrialPageState extends State<TutrialPage> {
   }
 
   Widget _buildTutrialsButtons() {
-    print(_index);
+    // print(_index);
     if (_index == 1)
       return _materialButton(Icons.payment_outlined);
     else

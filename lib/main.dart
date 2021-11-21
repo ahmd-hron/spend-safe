@@ -21,7 +21,6 @@ import './pages/bounse_pay_page.dart';
 import './pages/new_user_page.dart';
 import './pages/setting.dart';
 import 'pages/transparent_details_page.dart';
-import 'pages/tutrial_page.dart';
 
 void main() {
   runApp(MyApp());
